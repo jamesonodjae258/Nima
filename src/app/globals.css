@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF6B35;
+  --color-primary-hover: #E95724;
+  --color-primary-soft: #FFF0EA;
+  --color-primary-light: #FFB49B;
+  --color-primary-dark: #C9471B;
+
+  --color-nima-bg: #08090C;
+  --color-nima-surface: #111318;
+  --color-nima-elevated: #171A21;
+  --color-nima-border: #242832;
+  --color-nima-border-subtle: #1C2028;
+  --color-nima-border-focus: #3D4454;
+  --color-nima-text-primary: #F5F5F7;
+  --color-nima-text-secondary: #8B93A1;
+  --color-nima-text-muted: #5F6673;
+  --color-nima-text-disabled: #454A54;
+
+  --color-nima-accent: #FF6B35;
+  --color-nima-accent-hover: #E95724;
+  --color-nima-accent-soft: #FFF0EA;
+  --color-nima-accent-light: #FFB49B;
+  --color-nima-accent-dark: #C9471B;
+  --color-nima-accent-glow: rgba(255, 107, 53, 0.12);
+
+  --color-nima-success: #32D583;
+  --color-nima-warning: #F5B544;
+  --color-nima-error: #F04438;
+  --color-nima-info: #4DA3FF;
+
+  --radius-card: 12px;
+  --radius-panel: 16px;
+  --radius-control: 8px;
+}
+
+:root {
+  --color-primary: #FF6B35;
+  --color-primary-hover: #E95724;
+  --color-primary-soft: #FFF0EA;
+  --color-primary-light: #FFB49B;
+  --color-primary-dark: #C9471B;
+
+  --color-base-bg: #08090C;
+  --color-base-surface: #111318;
+  --color-base-elevated: #171A21;
+  --color-base-border: #242832;
+  --color-text-primary: #F5F5F7;
+  --color-text-secondary: #8B93A1;
+  --color-text-muted: #5F6673;
+  --color-text-disabled: #454A54;
+
+  --color-semantic-success: #32D583;
+  --color-semantic-warning: #F5B544;
+  --color-semantic-error: #F04438;
+  --color-semantic-info: #4DA3FF;
+
+  --background: #08090C;
+  --foreground: #F5F5F7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #08090C;
+  color: #F5F5F7;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom easing tokens */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242832;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #363C4A;
+}
+
+/* High-End Motion Keyframes */
+@keyframes agent-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.94); }
+}
+
+@keyframes agent-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shimmer-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes laser-flow {
+  0% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes laser-flow-reverse {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 100; }
+}
+
+@keyframes concentric-ping {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes ambient-drift {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes waveform-bounce {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+@keyframes border-beam {
+  0% { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer-sweep 6s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.animate-laser {
+  stroke-dasharray: 8 16;
+  animation: laser-flow 1.5s linear infinite;
+}
+
+.animate-laser-fast {
+  stroke-dasharray: 6 12;
+  animation: laser-flow 0.8s linear infinite;
+}
+
+.animate-concentric-ping {
+  animation: concentric-ping 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.animate-ambient-drift {
+  animation: ambient-drift 18s ease-in-out infinite;
+}
+
+.animate-agent-pulse {
+  animation: agent-pulse 2.2s ease-in-out infinite;
+}
+
+.animate-agent-spin {
+  animation: agent-spin 6s linear infinite;
+}
+
+/* Double-bezel haptic depth utilities */
+.double-bezel-outer {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.double-bezel-inner {
+  background: #111318;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06);
+}
+
