@@ -30,6 +30,8 @@
   --color-nima-error: #F04438;
   --color-nima-info: #4DA3FF;
 
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
   --radius-card: 12px;
   --radius-panel: 16px;
   --radius-control: 8px;
@@ -192,5 +194,49 @@ code, kbd, samp, pre {
   background: #111318;
   border: 1px solid rgba(255, 255, 255, 0.04);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06);
+}
+
+/* ================= HERO BANNER TOKENS & ANIMATIONS ================= */
+:root {
+  --bg-0: #09090b;
+  --bg-100: #18181b;
+  --bg-200: #27272a;
+  --bg-300: #3f3f46;
+  --text-100: #fafafa;
+  --text-200: #e4e4e7;
+  --text-300: #a1a1aa;
+  --text-400: #71717a;
+  --radius: 0.5rem;
+}
+
+.font-instrument-serif {
+  font-family: var(--font-serif, "Instrument Serif", Georgia, serif);
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-in-1 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+.animate-fade-slide-in-2 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.animate-fade-slide-in-3 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+.animate-fade-slide-in-4 {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 
