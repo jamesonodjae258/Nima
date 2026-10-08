@@ -89,6 +89,17 @@ export default function HomePage() {
       {/* Floating Scroll Progress Bar */}
       <ScrollProgress />
 
+      {/* Cinematic Cosmic Arc Hero Background */}
+      <div className="absolute top-0 left-0 right-0 h-[800px] sm:h-[960px] pointer-events-none select-none overflow-hidden z-0">
+        <img
+          src="/images/hero/cinematic-cosmic-arc.jpg"
+          alt=""
+          className="w-full h-full object-cover object-center opacity-90"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#08090C]/30 via-transparent to-[#08090C]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,transparent_30%,#08090C_95%)]" />
+      </div>
+
       {/* GPU Atmospheric Background */}
       <QuantumBackground />
 
