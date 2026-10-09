@@ -133,14 +133,14 @@ export default function HomePage() {
 
           {/* CTAs with IslandButton */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <Link href="/signup">
-              <IslandButton size="lg" variant="primary">
+            <Link href="/signup" className="w-full sm:w-auto">
+              <IslandButton size="lg" variant="primary" showArrow={false} className="w-full sm:w-[220px] justify-center">
                 Deploy your first agent
               </IslandButton>
             </Link>
 
-            <Link href="/demo">
-              <IslandButton size="lg" variant="secondary" showArrow={false}>
+            <Link href="/demo" className="w-full sm:w-auto">
+              <IslandButton size="lg" variant="secondary" showArrow={false} className="w-full sm:w-[220px] justify-center">
                 Explore live demo
               </IslandButton>
             </Link>
@@ -777,13 +777,13 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <Link href="/signup">
-                  <IslandButton size="lg" variant="primary">
+                <Link href="/signup" className="w-full sm:w-auto">
+                  <IslandButton size="lg" variant="primary" showArrow={false} className="w-full sm:w-[220px] justify-center">
                     Build your first agent
                   </IslandButton>
                 </Link>
-                <Link href="/demo">
-                  <IslandButton size="lg" variant="secondary" showArrow={false}>
+                <Link href="/demo" className="w-full sm:w-auto">
+                  <IslandButton size="lg" variant="secondary" showArrow={false} className="w-full sm:w-[220px] justify-center">
                     See live demo
                   </IslandButton>
                 </Link>

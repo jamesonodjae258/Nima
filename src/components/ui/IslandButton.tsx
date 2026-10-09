@@ -19,15 +19,21 @@ export const IslandButton = React.forwardRef<HTMLButtonElement, IslandButtonProp
       variant = 'primary',
       size = 'md',
       icon,
-      showArrow = true,
+      showArrow = false,
       className,
       ...props
     },
     ref
   ) => {
+    const hasIcon = Boolean(icon) || showArrow;
+
     const sizeClasses = {
-      md: 'pl-5 pr-2 py-2 text-xs font-semibold',
-      lg: 'pl-7 pr-2.5 py-2.5 text-sm font-semibold',
+      md: hasIcon
+        ? 'pl-5 pr-2.5 py-2 text-xs font-semibold min-h-[40px]'
+        : 'px-5 py-2.5 text-xs font-semibold justify-center min-h-[40px]',
+      lg: hasIcon
+        ? 'pl-6 pr-3 py-3 text-sm font-semibold min-h-[48px]'
+        : 'px-7 py-3.5 text-sm font-semibold justify-center min-h-[48px]',
     };
 
     const variantClasses = {
@@ -59,8 +65,8 @@ export const IslandButton = React.forwardRef<HTMLButtonElement, IslandButtonProp
       >
         <span>{children}</span>
 
-        {/* Nested Button-in-Button Trailing Icon with Kinetic Spring */}
-        {(showArrow || icon) && (
+        {/* Nested Trailing Icon (Only rendered when showArrow is explicitly true or icon provided) */}
+        {hasIcon && (
           <span
             className={cn(
               'w-7 h-7 rounded-full flex items-center justify-center shrink-0',

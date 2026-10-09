@@ -43,15 +43,14 @@ export default function ProductPage() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-3 pt-2">
-            <Link href="/signup">
-              <Button size="lg" className="text-xs font-medium shadow-[0_0_20px_rgba(255,107,53,0.35)]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <Link href="/signup" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-[200px] text-xs font-medium shadow-[0_0_20px_rgba(255,107,53,0.35)] justify-center">
                 <span>Start building</span>
-                <ArrowRight className="w-3.5 h-3.5 ml-1" />
               </Button>
             </Link>
-            <Link href="/demo">
-              <Button variant="secondary" size="lg" className="text-xs border-[#242832]">
+            <Link href="/demo" className="w-full sm:w-auto">
+              <Button variant="secondary" size="lg" className="w-full sm:w-[200px] text-xs border-[#242832] justify-center">
                 <span>Launch interactive demo</span>
               </Button>
             </Link>
