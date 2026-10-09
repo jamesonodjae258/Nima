@@ -87,23 +87,24 @@ export const WorkflowPipeline: React.FC = () => {
 
       {/* Pipeline Stages Strip with Traveling Laser Beam */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-3 relative">
-        {/* Animated Laser Connector Line for Desktop */}
-        <svg
-          className="hidden md:block absolute top-[28px] left-10 right-10 w-[calc(100%-80px)] h-2 z-0 pointer-events-none"
-          preserveAspectRatio="none"
-        >
-          <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#1C2028" strokeWidth="2" />
-          <line
-            x1="0"
-            y1="50%"
-            x2="100%"
-            y2="50%"
-            stroke="#FF6B35"
-            strokeWidth="2"
-            className="animate-laser"
-            strokeDasharray="8 16"
+        {/* State-Aware Connector Line for Desktop */}
+        <div className="hidden md:block absolute top-[28px] left-10 right-10 h-[2px] z-0 pointer-events-none">
+          <div className="w-full h-full bg-[#1C2028] rounded-full" />
+          <div
+            className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#32D583] via-[#32D583] to-[#FF6B35] rounded-full shadow-[0_0_8px_rgba(255,107,53,0.35)] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{
+              width: `${((activeStep - 1) / (stages.length - 1)) * 100}%`,
+            }}
           />
-        </svg>
+          {activeStep > 1 && (
+            <div
+              className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#FFA07A] shadow-[0_0_10px_2px_rgba(255,107,53,0.7)] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              style={{
+                left: `${((activeStep - 1) / (stages.length - 1)) * 100}%`,
+              }}
+            />
+          )}
+        </div>
 
         {stages.map((stage, idx) => {
           const isSelected = activeStep === stage.step;

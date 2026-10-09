@@ -127,23 +127,29 @@ export function HeroWorkflowAnimation() {
         {/* Pipeline Stage Track */}
         <div className="p-4 sm:p-5 border-b border-white/[0.05] bg-[#0A0C0F] relative overflow-x-auto scrollbar-none">
           <div className="flex items-center justify-between min-w-[580px] relative">
-            {/* SVG Connecting Beam */}
-            <svg
-              className="absolute top-1/2 left-6 right-6 -translate-y-1/2 w-[calc(100%-48px)] h-2 z-0 pointer-events-none"
-              preserveAspectRatio="none"
-            >
-              <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#1F242E" strokeWidth="2" />
-              <line
-                x1="0"
-                y1="50%"
-                x2="100%"
-                y2="50%"
-                stroke="#FF6B35"
-                strokeWidth="2"
-                className="animate-laser"
-                strokeDasharray="8 16"
+            {/* State-Aware Linear Connector Track (Centered with icons at top-5) */}
+            <div className="absolute top-5 left-5 right-5 h-[2px] -translate-y-1/2 pointer-events-none z-0">
+              {/* Dormant Baseline Rail */}
+              <div className="w-full h-full bg-[#1A1F29] rounded-full" />
+
+              {/* Active Completed Progress Rail */}
+              <div
+                className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#32D583] via-[#32D583] to-[#FF6B35] rounded-full shadow-[0_0_8px_rgba(255,107,53,0.35)] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                style={{
+                  width: `${((activeStep - 1) / (nodes.length - 1)) * 100}%`,
+                }}
               />
-            </svg>
+
+              {/* Leading Edge Data Packet Bead */}
+              {activeStep > 1 && (
+                <div
+                  className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#FFA07A] shadow-[0_0_10px_2px_rgba(255,107,53,0.7)] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  style={{
+                    left: `${((activeStep - 1) / (nodes.length - 1)) * 100}%`,
+                  }}
+                />
+              )}
+            </div>
 
             {nodes.map((node) => {
               const isActive = activeStep === node.id;
@@ -156,15 +162,15 @@ export function HeroWorkflowAnimation() {
                   className="relative z-10 flex flex-col items-center group cursor-pointer select-none"
                 >
                   <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ring-4 ring-[#0A0C0F] ${
                       isActive
                         ? 'bg-[#FF6B35] text-[#08090C] shadow-[0_0_20px_rgba(255,107,53,0.4)] scale-105 font-bold'
                         : isDone
-                        ? 'bg-[#1F242E] text-[#32D583] border border-[#32D583]/30'
-                        : 'bg-[#14171F] text-[#5C6370] border border-white/[0.06] hover:border-white/[0.15]'
+                        ? 'bg-[#121915] text-[#32D583] border border-[#32D583]/40'
+                        : 'bg-[#11141C] text-[#5C6370] border border-white/[0.08] hover:border-white/[0.18]'
                     }`}
                   >
-                    {isDone ? <Check className="w-4 h-4" /> : node.icon}
+                    {isDone ? <Check className="w-4 h-4 text-[#32D583]" /> : node.icon}
                   </div>
 
                   <span
