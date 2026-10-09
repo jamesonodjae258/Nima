@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export function MarketingFooter() {
   return (
-    <footer className="w-full border-t border-[#242832] bg-[#08090C] text-xs text-[#8B93A1]">
+    <footer className="w-full border-t border-white/[0.08] bg-[#08090C] text-xs text-[#9CA3AF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand Column */}
@@ -18,12 +18,12 @@ export function MarketingFooter() {
                 NIMA
               </span>
             </Link>
-            <p className="text-xs text-[#8B93A1] max-w-sm leading-relaxed">
+            <p className="text-xs text-[#9CA3AF] max-w-sm leading-relaxed">
               Give AI a job. Autonomous agents that research, analyze, make decisions, and take action across your enterprise tools.
             </p>
-            <div className="pt-2 flex items-center gap-2 text-[11px] text-[#5C6370]">
-              <span className="w-2 h-2 rounded-full bg-[#32D583]" />
-              <span>Nima Core v2.4 Operational</span>
+            <div className="pt-2 flex items-center gap-2 text-xs text-[#9CA3AF]">
+              <span className="w-2 h-2 rounded-full bg-[#32D583] shadow-[0_0_8px_rgba(50,213,131,0.5)]" />
+              <span className="font-mono text-[11px]">Nima Core v2.4 Operational</span>
             </div>
           </div>
 
@@ -34,27 +34,27 @@ export function MarketingFooter() {
             </div>
             <ul className="space-y-2">
               <li>
-                <Link href="/product" className="hover:text-[#F5F5F7] transition-colors">
+                <Link href="/product" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
                   Overview
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="hover:text-[#F5F5F7] transition-colors">
+                <Link href="/solutions" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
                   Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-[#F5F5F7] transition-colors">
+                <Link href="/pricing" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/demo" className="hover:text-[#F5F5F7] transition-colors">
+                <Link href="/demo" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
                   Interactive Demo
                 </Link>
               </li>
               <li>
-                <Link href="/dashboard" className="hover:text-[#FF6B35] transition-colors">
+                <Link href="/dashboard" className="text-[#FF8C61] hover:text-[#FF6B35] font-medium transition-colors">
                   App Dashboard →
                 </Link>
               </li>
@@ -68,18 +68,22 @@ export function MarketingFooter() {
             </div>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="hover:text-[#F5F5F7] transition-colors">
+                <Link href="/about" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
                   About Nima
                 </Link>
               </li>
               <li>
-                <span className="text-[#5C6370] cursor-not-allowed">Documentation</span>
+                <Link href="/demo" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
+                  Documentation
+                </Link>
               </li>
               <li>
-                <span className="text-[#5C6370] cursor-not-allowed">Guides & Playbooks</span>
+                <Link href="/solutions" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
+                  Guides & Playbooks
+                </Link>
               </li>
               <li>
-                <span className="text-[#5C6370] cursor-not-allowed">System Status</span>
+                <span className="text-[#9CA3AF]/90">System Status</span>
               </li>
             </ul>
           </div>
@@ -95,7 +99,7 @@ export function MarketingFooter() {
                   href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#F5F5F7] transition-colors"
+                  className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors"
                 >
                   X (Twitter)
                 </a>
@@ -105,27 +109,31 @@ export function MarketingFooter() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#F5F5F7] transition-colors"
+                  className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors"
                 >
                   LinkedIn
                 </a>
               </li>
               <li>
-                <span className="text-[#5C6370] cursor-not-allowed">Privacy Policy</span>
+                <Link href="/about" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
+                  Privacy Policy
+                </Link>
               </li>
               <li>
-                <span className="text-[#5C6370] cursor-not-allowed">Terms of Service</span>
+                <Link href="/about" className="text-[#9CA3AF] hover:text-[#F5F5F7] transition-colors">
+                  Terms of Service
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom copyright line */}
-        <div className="mt-12 pt-6 border-t border-[#242832]/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-[#5C6370]">
+        <div className="mt-12 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#9CA3AF]">
           <div>© {new Date().getFullYear()} Nima AI Inc. All rights reserved.</div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-xs text-[#9CA3AF]">
             <span>Enterprise-Grade Security</span>
-            <span>•</span>
+            <span className="text-white/20">•</span>
             <span>Human-in-the-Loop Governance</span>
           </div>
         </div>
