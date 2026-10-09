@@ -124,9 +124,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile, className }) =>
             onClick={onCloseMobile}
             className="flex items-center gap-2.5 group"
           >
-            <div className="w-6 h-6 rounded-md bg-[#FF6B35] flex items-center justify-center font-bold text-[#08090C] text-xs shadow-[0_0_12px_rgba(255,107,53,0.4)] group-hover:scale-105 transition-transform">
-              N
-            </div>
+            <img
+              src="/logo/symbol.png"
+              alt="Nima"
+              className="w-6 h-6 object-contain transition-transform group-hover:scale-105 drop-shadow-[0_0_8px_rgba(255,107,53,0.3)]"
+            />
             <div className="flex items-center gap-2">
               <span className="font-semibold text-sm tracking-widest text-[#F5F5F7]">NIMA</span>
               <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded bg-[#171A21] text-[#8B93A1] border border-[#242832]">

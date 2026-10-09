@@ -18,7 +18,13 @@ export const metadata: Metadata = {
   title: 'Nima — Give AI a job',
   description: 'Enterprise AI Agent Platform. Create AI agents that research, analyze, make decisions, and take action across the tools you already use.',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 

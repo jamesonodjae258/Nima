@@ -22,12 +22,11 @@ export function MarketingNav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Left: Brand Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#FF6B35] to-[#C9471B] flex items-center justify-center text-[#08090C] font-bold shadow-[0_0_12px_rgba(255,107,53,0.35)] group-hover:shadow-[0_0_18px_rgba(255,107,53,0.5)] transition-all">
-            <span className="font-bold text-xs tracking-wider">N</span>
-          </div>
-          <span className="font-semibold text-base tracking-tight text-[#F5F5F7] group-hover:text-white transition-colors">
-            NIMA
-          </span>
+          <img
+            src="/logo/full-logo.png"
+            alt="Nima"
+            className="h-7 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+          />
         </Link>
 
         {/* Center: Desktop Navigation Links */}

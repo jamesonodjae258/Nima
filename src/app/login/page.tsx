@@ -25,13 +25,12 @@ export default function LoginPage() {
     <div className="min-h-screen bg-[#08090C] text-[#F5F5F7] flex flex-col justify-between selection:bg-[#FF6B35]/30 selection:text-white">
       {/* Minimal Top Header */}
       <header className="h-16 px-6 flex items-center justify-between border-b border-[#242832]/60">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#FF6B35] to-[#C9471B] flex items-center justify-center text-[#08090C] font-bold shadow-sm">
-            <span className="font-bold text-xs tracking-wider">N</span>
-          </div>
-          <span className="font-semibold text-base tracking-tight text-[#F5F5F7]">
-            NIMA
-          </span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <img
+            src="/logo/full-logo.png"
+            alt="NIMA"
+            className="h-7 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </Link>
 
         <Link href="/signup" className="text-xs text-[#8B93A1] hover:text-[#F5F5F7] transition-colors">
@@ -42,7 +41,14 @@ export default function LoginPage() {
       {/* Center Auth Card */}
       <main className="flex-1 flex items-center justify-center p-4">
         <div className="w-full max-w-sm rounded-2xl bg-[#111318] border border-[#242832] p-8 shadow-2xl space-y-6">
-          <div className="space-y-1 text-center">
+          <div className="space-y-2 text-center">
+            <div className="mx-auto w-12 h-12 mb-1 flex items-center justify-center">
+              <img
+                src="/logo/symbol.png"
+                alt="Nima"
+                className="w-10 h-10 object-contain drop-shadow-[0_0_12px_rgba(255,107,53,0.35)]"
+              />
+            </div>
             <h1 className="text-xl font-semibold text-[#F5F5F7] tracking-tight">
               Welcome back.
             </h1>

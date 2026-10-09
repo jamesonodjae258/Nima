@@ -10,13 +10,12 @@ export function MarketingFooter() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="col-span-2 space-y-3">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[#FF6B35] to-[#C9471B] flex items-center justify-center text-[#08090C] font-bold shadow-sm">
-                <span className="font-bold text-[11px]">N</span>
-              </div>
-              <span className="font-semibold text-sm tracking-tight text-[#F5F5F7]">
-                NIMA
-              </span>
+            <Link href="/" className="inline-flex items-center gap-2.5 group">
+              <img
+                src="/logo/full-logo.png"
+                alt="Nima"
+                className="h-6 w-auto object-contain transition-opacity duration-200 group-hover:opacity-90"
+              />
             </Link>
             <p className="text-xs text-[#9CA3AF] max-w-sm leading-relaxed">
               Give AI a job. Autonomous agents that research, analyze, make decisions, and take action across your enterprise tools.
